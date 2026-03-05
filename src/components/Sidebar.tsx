@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom';
+
 export function Sidebar() {
   return (
     <aside className="w-72 flex-shrink-0 border-r border-slate-100 bg-white flex flex-col justify-between p-8">
@@ -12,26 +14,51 @@ export function Sidebar() {
           </div>
         </div>
         <nav className="flex flex-col gap-1.5">
-          <a className="flex items-center gap-3 px-4 py-3.5 rounded-xl bg-primary text-white font-medium shadow-lg shadow-primary/20 transition-all" href="#">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `flex items-center gap-3 px-4 py-3.5 rounded-xl transition-all ${isActive ? 'bg-primary text-white font-medium shadow-lg shadow-primary/20' : 'text-slate-500 hover:bg-slate-50 hover:text-primary'}`
+            }
+          >
             <span className="material-symbols-outlined">dashboard</span>
             <span className="text-sm">Dashboard</span>
-          </a>
-          <a className="flex items-center gap-3 px-4 py-3.5 rounded-xl text-slate-500 hover:bg-slate-50 hover:text-primary transition-all" href="#">
+          </NavLink>
+          <NavLink
+            to="/workouts"
+            className={({ isActive }) =>
+              `flex items-center gap-3 px-4 py-3.5 rounded-xl transition-all ${isActive ? 'bg-primary text-white font-medium shadow-lg shadow-primary/20' : 'text-slate-500 hover:bg-slate-50 hover:text-primary'}`
+            }
+          >
             <span className="material-symbols-outlined">fitness_center</span>
             <span className="text-sm">Workouts</span>
-          </a>
-          <a className="flex items-center gap-3 px-4 py-3.5 rounded-xl text-slate-500 hover:bg-slate-50 hover:text-primary transition-all" href="#">
+          </NavLink>
+          <NavLink
+            to="/nutrition"
+            className={({ isActive }) =>
+              `flex items-center gap-3 px-4 py-3.5 rounded-xl transition-all ${isActive ? 'bg-primary text-white font-medium shadow-lg shadow-primary/20' : 'text-slate-500 hover:bg-slate-50 hover:text-primary'}`
+            }
+          >
             <span className="material-symbols-outlined">restaurant</span>
             <span className="text-sm">Nutrition</span>
-          </a>
-          <a className="flex items-center gap-3 px-4 py-3.5 rounded-xl text-slate-500 hover:bg-slate-50 hover:text-primary transition-all" href="#">
+          </NavLink>
+          <NavLink
+            to="/goals"
+            className={({ isActive }) =>
+              `flex items-center gap-3 px-4 py-3.5 rounded-xl transition-all ${isActive ? 'bg-primary text-white font-medium shadow-lg shadow-primary/20' : 'text-slate-500 hover:bg-slate-50 hover:text-primary'}`
+            }
+          >
             <span className="material-symbols-outlined">insights</span>
-            <span className="text-sm">Progress</span>
-          </a>
-          <a className="flex items-center gap-3 px-4 py-3.5 rounded-xl text-slate-500 hover:bg-slate-50 hover:text-primary transition-all" href="#">
+            <span className="text-sm">Goals</span>
+          </NavLink>
+          <NavLink
+            to="/settings"
+            className={({ isActive }) =>
+              `flex items-center gap-3 px-4 py-3.5 rounded-xl transition-all ${isActive ? 'bg-primary text-white font-medium shadow-lg shadow-primary/20' : 'text-slate-500 hover:bg-slate-50 hover:text-primary'}`
+            }
+          >
             <span className="material-symbols-outlined">settings</span>
             <span className="text-sm">Settings</span>
-          </a>
+          </NavLink>
         </nav>
       </div>
       <div className="flex flex-col gap-6">
