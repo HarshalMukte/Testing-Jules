@@ -4,6 +4,7 @@ import { StatCards } from './components/StatCards';
 import { ActivityOverview } from './components/ActivityOverview';
 import { TargetGoal } from './components/TargetGoal';
 import { BottomStats } from './components/BottomStats';
+import { PersonalGoals } from './components/PersonalGoals';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <TargetGoal />
         </section>
         <BottomStats />
+        <PersonalGoals />
       </main>
     </div>
   );
