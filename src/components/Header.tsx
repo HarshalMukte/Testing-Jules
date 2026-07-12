@@ -3,7 +3,7 @@ export function Header() {
     <header className="flex justify-between items-center mb-12">
       <div>
         <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight mb-2">Fitness Dashboard</h2>
-        <p className="text-slate-500 font-medium">Hello Alex, you've completed <span className="text-primary font-bold">80%</span> of your daily movement.</p>
+        <p className="text-slate-500 font-medium">Hello John, you've completed <span className="text-primary font-bold">80%</span> of your daily movement.</p>
       </div>
       <div className="flex gap-4">
         <div className="relative">
